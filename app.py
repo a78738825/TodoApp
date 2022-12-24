@@ -45,6 +45,5 @@ def show_table():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
 
-
 # What's left to edit :
 #? And also pls use try...except for exception handling (especially for connecting to mongoDB)
