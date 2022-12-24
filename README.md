@@ -1,13 +1,15 @@
 # TodoApp
 > A Simple Flask app made in Python3.
 
-<div style="left: 15px;" id="badges1">
+## Contact and Tools
+<br>
+<div align="center" id="badges1">
   <a href="https://www.instagram.com/itz_the_dark_007/">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge"/>
   </a>
 </div>
 
-<div style="left: 15px;" id="badges2">
+<div align="center" id="badges2">
   <a href="https://code.visualstudio.com/">
     <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VS code Badge"/>
   </a>
@@ -16,7 +18,7 @@
   </a>
 </div>
 
-<div id="badges3">
+<div align="center" id="badges3">
   <a href="https://www.mongodb.com">
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Badge"/>
   </a>
@@ -37,7 +39,7 @@
   </a>
 </div>
 
-<div id="badges4">
+<div align="center" id="badges4">
   <a href="#">
     <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux Badge"/>
   </a>
@@ -49,13 +51,14 @@
   </a>
 </div>
 
+<hr>
+A Simple Flask Todo Webapp made in Python3 for Testing purpose with Mongo NoSQL database.
+<br>
+<br>
 
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-A Simple Flask Todo Webapp made in Python3 for Testing purpose with Mongo NoSQL database.
-
-![](header.png)
 
 ## Installation
 
