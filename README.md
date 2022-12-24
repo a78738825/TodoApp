@@ -1,7 +1,7 @@
 # TodoApp
 > A Simple Flask app made in Python3.
 
-## Contact and Tools
+## Contact and Tools used :
 <br>
 <div align="center" id="badges1">
   <a href="https://www.instagram.com/itz_the_dark_007/">
@@ -66,6 +66,7 @@ OS X, Linux & Windows:
 
 ```sh
 git clone https://github.com/a78738825/TodoApp
+
 pip install flask, flask_pymongo
 ```
 
@@ -89,6 +90,7 @@ Create virtual enviroment :
 
 ```sh
 pip install virtualenv
+
 virtualenv venv
 ```
 
@@ -106,6 +108,7 @@ Create virtual enviroment :
 
 ```sh
 pip install virtualenv
+
 virtualenv venv
 ```
 
