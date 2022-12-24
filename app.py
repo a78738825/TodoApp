@@ -1,24 +1,15 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify
 from flask_pymongo import PyMongo
+from datetime import datetime
 
 app = Flask(__name__)
 
-# client = MongoClient('localhost', 27017)
-# db = client.flaskdb
-# collec = db.mycollection
 
 app.config['MONGO_URI'] = "mongodb://localhost:27017/flaskdb"
 mongo = PyMongo(app)
 collection = mongo.db.collection
 
 cursor = list(collection.find({}, {"_id":0}))
-
-# docs = {}
-# for a in cursor:  
-#     docs.append(a)
-
-# j2h = json2html.convert(json = docs)
-# print(j2h)
 
 @app.route('/')
 def index():
@@ -27,21 +18,18 @@ def index():
 @app.route('/create')
 def create_user():
     return render_template('create.html')
-    # if request.method == "POST":
-    #     todo_title = request.form['todo_title']
-    #     todo_desc = request.form['todo_desc']
-    #     collection.insert_one({'Title': todo_title, 'Description': todo_desc})
-    # all_todos = collection.find({}, {"_id": 0})
-    # return redirect(url_for('save_table', todos = all_todos))
     
 @app.route('/post', methods=['GET', 'POST'])
 def save_form():
     if request.method == "POST":
-        todo_title = (request.form['todo_title'])
-        todo_desc = (request.form['todo_desc'])
-        collection.insert_one({'Title': todo_title, 'Description': todo_desc})
-    elif request.method == "GET":
-        print("Bro, don't use hard encoding in the link use the form provided")
+        try:
+            todo_title = (request.form['todo_title'])
+            todo_desc = (request.form['todo_desc'])
+            collection.insert_one({'Title': todo_title, 'Description': todo_desc, 'Created': datetime.now()})
+        except Exception as e:
+            print("ERROR : ", str(e))
+    # elif request.method == "GET":
+    #     print("GET method")
     else:
         print("error")
     
@@ -59,5 +47,4 @@ if __name__ == '__main__':
 
 
 # What's left to edit :
-#? adding data and time on which form is submitted using datatime module...
 #? And also pls use try...except for exception handling (especially for connecting to mongoDB)
