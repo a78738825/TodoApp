@@ -1,4 +1,4 @@
-# Product Name
+# TodoApp
 > A Simple Flask app made in Python3.
 
 [![Build Status][travis-image]][travis-url]
